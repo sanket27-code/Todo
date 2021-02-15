@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.todo_box{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #25CCF7 10%, #1B9CFC, #6c5ce7, #3B3B98);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Form_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.Form_box .Input_type{
+    border: none;
+    outline: none;
+    width: 350px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: transparent;
+    background-color: white;
+    margin: 0 5px 0 0;
+}
+.Form_box .btn{
+    color: white;
+    width: 105px;
+    background-color: black;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    transition: all 0.5s ease-in-out;
+    font-weight: 600;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.Form_box .btn:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+.Tasks_box{
+    width: 500px;
+    height: 340px;
+    margin-top: 15px;
+    overflow-y: auto;
+}
+
+.Tasks_box .Task{
+    width: 460px;
+    height: 50px;
+    padding: 5px auto;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right, #833471 1%,#ED4C67, #6F1E51);
+}
+.Tasks_box .Task .options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Tasks_box .Task .msg{
+    width: 70%;
+    padding: 5px 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family:'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    text-decoration-color: black;
+    text-decoration-thickness: 2px;
+    cursor: pointer;
+}
+.Tasks_box .Task .options p{
+    margin: auto 5px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.edit{
+    color: #009432;
+}
+.del{
+    color: #eb2f06;
+}
+.clear_btn{
+    width: 420px;
+    height: 40px;
+    background-color: #fd0606;
+    color: white;
+    margin: 10px auto 5px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.clear_btn:hover{
+    background-color: black;
+    color: #fd0606;
+    border: 1px solid #fd0606;
+}
+.Update_Modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+.Update_Modal .Update_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    color: black;
+    height: 220px;
+    width: 600px;
+}
+.Update_Modal .Update_box .close_modal{
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    transform: rotateZ(45deg);
+    font-size: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.Update_Modal .Update_box .close_modal:hover{
+    animation: cross 0.5s ease-in;
+}
+@keyframes cross{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(180deg);
+    }
+}
+
+.Update_Modal .Update_box .Update_form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.Update_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Update_input{
+    border: none;
+    outline: none;
+    width: 350px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: transparent;
+    background-color: white;
+    margin: 0 5px 0 0;
+}
+.Update_btn{
+    color: #f8890a;
+    width: 105px;
+    background-color: #A3CB38;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #009432;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    font-family:'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+.Update_btn:hover{
+    color: #009432;
+    background-color: #f8890a;
+    border: 2px solid #A3CB38;
+}
